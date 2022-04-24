@@ -1,0 +1,163 @@
+{% extends 'layout/base.html' %}
+{% load static %}
+{% block css %}
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <style>
+      
+      @import url('https://fonts.googleapis.com/css2?family=Lemon&display=swap');
+      @import url('https://fonts.googleapis.com/css2?family=Aref+Ruqaa&display=swap');
+
+        body{
+          background-image: url('{% static "images/bg1.jpg" %}');
+          height: 500px;
+          height: 500px;
+  background-position: center;
+  background-size: cover;
+  position: relative;
+        }
+        .section-2{
+            background-color: rgb(97, 212, 235);
+        }
+        .text-large{
+            font-size: larger;
+            font-weight: bold;
+        }
+        .card{
+            text-align: center;
+            align-content: center;
+            box-shadow: 3px 8px 16px 0 rgba(0, 0, 0, 0.2), 3px 6px 20px 0 rgba(0, 0, 0, 0.19);
+        }
+
+        .card:hover {
+            transform: scale(1.02);
+        }
+
+        .card-body{
+          background-color: #fdb07d;
+        }
+        .card-img-top{
+        height:150px;
+        width:150px;
+        background-color: #44ccba;
+      
+      }
+
+      .img-fluid{
+        display: block;
+        margin-left: auto;
+        margin-right: auto;
+        margin-top: 40px;
+        margin-bottom: 90px;
+        opacity: 80%;
+        width: 90%;
+        border-radius: 30px;
+        box-shadow: 2px 4px 8px  rgba(0, 0, 0, 0.2), 2px 6px 20px  rgba(0, 0, 0, 0.19), 2px 6px 20px  rgba(0, 0, 0, 0.19);
+      }
+
+      .img-fluid:hover {
+            transform: scale(1.03);
+        }
+
+      .card-header{
+        font-size: xx-large;
+        color: black;
+      }
+      .card-body{
+        color: black;
+      }
+
+      .btn.btn-primary:hover{
+        transform: scale(1.06);
+      }
+      .content{
+        font-family: 'Aref Ruqaa', serif;
+        font-size: 30px;
+      }
+      
+      .fadeIn span{
+        opacity: 0;
+        transform: translateY(65%);
+        animation: fadeIn 2.0s ease-in forwards;
+        display:inline-block;
+        }
+
+        .fadeIn span:nth-of-type(2){
+        animation-delay: 2.0s;
+         }
+
+
+        @keyframes fadeIn{
+        to{
+          transition:opacity .2s, transform .3s, color 2s .4s;
+	        color:#FF3355;
+	        opacity:1;
+	        transform:translateY(0);
+         }
+        }
+
+        .fadeIn{
+          font-size: 70px;
+          text-align: center;
+          margin: 40px;
+          text-shadow: 2px 2px black;
+          font-weight: bolder;
+        }
+    </style>
+{% endblock css %}
+</head>
+{% block content %}
+<body>
+  
+  <div class="fadeIn">
+    <span>Having A Problem ?</span> <br>
+    <span>We can help you out.</span>
+  </div>
+<div class="container ">
+    <div class="row">
+        <div class="col px-0">
+            <img src="{% static 'images\bgg.png' %}"  alt="background image" class="img-fluid" >
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-sm-4" style="margin-top: 60px; ">
+          <div class="card">
+            <div class="card-img-top">
+              <img src="{% static 'images\register.png' %}" alt="...">
+            </div>
+            <div class="card-body">
+              <h5 class="card-title">Add Complaint</h5>
+              <p class="card-text">All the complaints till 22-July-2021 have been resolved.</p>
+              <a href="{% url 'complaint_add' %}" class="btn btn-primary">Add Complaint</a>
+            </div>
+          </div>
+        </div>
+        <div class="col-sm-4" style="margin-top: 60px;">
+          <div class="card">
+              <div class="card-img-top">
+                <img src="{% static 'images/status.png' %}" alt="...">
+              </div>
+            <div class="card-body">
+              <h5 class="card-title">View Status</h5>
+              <p class="card-text">Check the current status of all your grievances. These are updated in real-time.</p>
+              <a href="{% url 'status' %}" class="btn btn-primary">View Status</a>
+            </div>
+          </div>
+        </div>
+        <div class="col-sm-4" style="margin-top: 60px;">
+          <div class="card">
+            <div class="card-img-top">
+            <img src="{% static 'images/contact.png' %}" alt="...">
+          </div>
+            <div class="card-body">
+              <h5 class="card-title">Contact Us</h5>
+              <p class="card-text">In case of a problem, you can contact us for any further assistance.</p>
+              <a href="{% url 'contact' %}" class="btn btn-primary">Contact Us</a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </body>
+{% endblock content %}

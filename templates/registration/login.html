@@ -1,0 +1,48 @@
+{% extends 'layout/base.html' %}
+{% load socialaccount %}
+{% load static %}
+{% block css %}
+    <style>
+        body{
+            
+            background-image: url('{% static "images/contactbg.png" %}');
+        }
+        .card-title{
+          font-size: 50px;
+          color: #FF3355;
+          text-align: center;
+          text-shadow: 2px 2px black;
+          font-weight: bolder;
+        }
+        .bord{
+            border-radius: 30px;
+
+        }
+        
+    </style>
+{% endblock css %}
+    
+        
+
+
+{% block content %}
+{% if user.is_authenticated %}
+
+{% else %}
+
+<div class="col-md-6 mx-auto text-center">
+        <img src="{% static 'images\1122.png' %}"  alt="background image" class="img-fluid" width="15%" style="margin-bottom: 50px;">
+        <h1 class="card-title" >!! You need to login first !!</h1>
+    <div class="card-body">
+      <a href="{% provider_login_url 'google' %}"  class="btn btn-primary">Login With Google</a>
+    </div>
+  </div>
+{% endif %}
+
+
+
+{% endblock content %}
+{% block js %}
+
+{% endblock js %}
+

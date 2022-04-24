@@ -1,0 +1,36 @@
+{% extends 'layout/base.html' %}
+{% load static %}
+{% block css %}
+
+<style>
+      body{          
+            background-image: url('{% static "images/contactbg.png" %}');
+      }
+      .card.text-center{
+          background-image: url('{% static "images\bg1.jpg" %}');
+          box-shadow: 2px 4px 8px  rgba(0, 0, 0, 0.2), 2px 6px 20px  rgba(0, 0, 0, 0.19), 2px 6px 20px  rgba(0, 0, 0, 0.19);
+          border-radius: 35px;
+          padding: 100px;
+          margin-top: 150px;
+      }
+        
+  </style>
+  {% endblock css %}
+</head>
+
+{% block content %}
+<body>
+  <div class="col-md-8 mx-auto">
+  <div class="card text-center">
+    <div class="card-body">
+      <h2 class="card-title">Your Complaint Has Been Successfully Registered.</h2>
+      <h3 class="card-text"> Complaint number is : <u> {{request.session.complaintnumber}} </u></h3>
+      <h5 class="card-text">Please make sure to save this complaint number</h5>
+    </div>
+    </div>
+  </div>
+</body>
+{% endblock content %}
+  
+
+</html>
