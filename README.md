@@ -1,5 +1,18 @@
 Grievance Portal
 
+![s1](https://github.com/sumit-mall/grievance_portal/assets/70622737/26ee9775-06c3-4616-a9c7-1d87bd9bd682)
+
+![s2](https://github.com/sumit-mall/grievance_portal/assets/70622737/28d4893c-4107-4ad1-9351-f738ecab84fe)
+
+![s3](https://github.com/sumit-mall/grievance_portal/assets/70622737/00759963-ca4b-4c82-bc8f-881e331a9f35)
+
+![s4](https://github.com/sumit-mall/grievance_portal/assets/70622737/7956cb1b-a199-4139-9e50-25b13c8286f2)
+
+![s5](https://github.com/sumit-mall/grievance_portal/assets/70622737/9686a809-0d89-4f57-8451-2073d19532c3)
+
+![s6](https://github.com/sumit-mall/grievance_portal/assets/70622737/8bbecb36-2798-41d1-8bd1-efd79eac4c97)
+
+
 This project is a Django-based Grievance Portal designed to handle complaints efficiently. It features a form for adding complaints, a section for tracking complaint status, and a contact form. The portal also includes an admin panel with access to all tables and records, and uses Google OAuth for authentication. This system can be implemented in various settings such as schools, colleges, workplaces, and offices.
 
 Features
